@@ -1,0 +1,91 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: url('MWII6.png') no-repeat center center fixed;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+#profilePage {
+    max-width: 800px;
+    width: 90%;
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0);
+    border-radius: 10px;
+}
+
+header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+header .logo {
+    width: 120px;
+}
+
+.profile-header h1 {
+    text-align: center;
+    font-size: 24px;
+    color: #183F6A;
+    margin-bottom: 20px;
+}
+
+.profile-details {
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+.profile-info p {
+    margin: 10px 0;
+    font-size: 16px;
+    color: #333;
+}
+
+.navigation-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.navigation-buttons button {
+    padding: 12px 24px;
+    font-size: 16px;
+    background-color: #183F6A;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.navigation-buttons button:hover {
+    background-color: #82AFC2;
+}
+
+/* Mobile-Friendly Adjustments */
+@media (max-width: 600px) {
+    header .logo {
+        width: 100px;
+    }
+
+    .profile-header h1 {
+        font-size: 20px;
+    }
+
+    .profile-info p {
+        font-size: 14px;
+    }
+
+    .navigation-buttons button {
+        padding: 10px 20px;
+        font-size: 14px;
+    }
+}

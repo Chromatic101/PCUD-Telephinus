@@ -1,0 +1,133 @@
+/* General Styles */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background: url('MWII.png') no-repeat center center fixed;
+    background-size: cover;
+    text-align: center;
+	display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#mainInterface {
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0);
+    padding: 20px;
+    border-radius: 10px;
+    width: 90%;
+    max-width: 400px;
+}
+
+header .logo {
+    width: 150px; /* Adjust the size of your logo */
+    margin-bottom: 20px;
+}
+
+.button-container {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+button {
+    padding: 12px 24px;
+    font-size: 16px;
+    color: white;
+    background-color: #4A7DA4;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #82AFC2;
+}
+
+footer {
+    margin-top: 20px;
+    font-size: 14px;
+    color: #82AFC2;
+}
+
+footer p {
+    margin: 5px 0;
+}
+
+/* Login/Signup Interface Styles */
+#loginSignupContainer {
+    display: none;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+	background-color: rgba(0, 0, 0, 0);
+}
+
+#loginForm, #signupForm {
+    background-color: rgba(0, 0, 0, 0);
+    padding: 20px;
+    border-radius: 10px;
+    width: 90%;
+    max-width: 400px;
+    text-align: center;
+}
+
+h2 {
+    font-size: 24px;
+    color: #000000;
+    margin-bottom: 20px;
+}
+
+input {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+.form-row {
+    display: flex;
+    gap: 10px;
+}
+
+.form-row input {
+    flex: 1;
+}
+
+a {
+    color: #183F6A;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* Mobile-Friendly Adjustments */
+@media (max-width: 600px) {
+    header .logo {
+        width: 120px;
+    }
+
+    button {
+        padding: 10px 20px;
+        font-size: 14px;
+    }
+
+    footer {
+        font-size: 12px;
+    }
+
+    h2 {
+        font-size: 20px;
+    }
+
+    input {
+        padding: 8px;
+        font-size: 12px;
+    }
+}

@@ -1,0 +1,218 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: url('MWII6.png') no-repeat center center fixed;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+#calendarPage {
+    max-width: 800px;
+    width: 90%;
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0);
+    border-radius: 10px;
+    position: relative;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    position: relative; /* Added for dropdown positioning */
+}
+
+header .logo {
+    width: 120px;
+    cursor: pointer;
+}
+
+#backButton {
+    padding: 10px 20px;
+    font-size: 14px;
+    background-color: #183F6A;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 20px;
+    width: 100%;
+}
+
+#backButton:hover {
+    background-color: #183F6A;
+}
+
+h1 {
+    text-align: center;
+    font-size: 24px;
+    color: #000000;
+    margin-bottom: 20px;
+}
+
+.month-year-picker {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.month-year-picker select, .month-year-picker input {
+    padding: 8px;
+    font-size: 14px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.calendar {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.weekdays, .days {
+    display: contents;
+}
+
+.weekdays div, .days div {
+    text-align: center;
+    padding: 10px;
+    background-color: #f9f9f9;
+    border-radius: 5px;
+}
+
+.events .event {
+    margin-bottom: 20px;
+    padding: 15px;
+    background-color: #f9f9f9;
+    border-radius: 5px;
+}
+
+.events .event h3 {
+    margin: 0;
+    font-size: 18px;
+    color: #333;
+}
+
+.events .event p {
+    margin: 5px 0;
+    font-size: 14px;
+    color: #666;
+}
+
+.events .event button {
+    padding: 8px 16px;
+    font-size: 14px;
+    background-color: #183F6A;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.events .event button:hover {
+    background-color: #82AFC2;
+}
+
+/* Dropdown Menu */
+.dropdown {
+    display: none;
+    position: absolute;
+    top: 50px; /* Adjusted to align below the logo */
+    right: 100px; /* Align to the right of the header */
+    background-color: white;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    z-index: 1;
+}
+
+.dropdown ul {
+    list-style: none;
+    padding: 10px;
+    margin: 0;
+}
+
+.dropdown ul li {
+    padding: 10px;
+    cursor: pointer;
+}
+
+.dropdown ul li:hover {
+    background-color: #f1f1f1;
+}
+
+.dropdown ul li a {
+    text-decoration: none;
+    color: #333;
+}
+
+/* Modal Styles */
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-content {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    max-width: 500px;
+    width: 90%;
+    text-align: center;
+}
+
+.close {
+    float: right;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+/* Mobile-Friendly Adjustments */
+@media (max-width: 600px) {
+    header .logo {
+        width: 100px;
+    }
+
+    h1 {
+        font-size: 20px;
+    }
+
+    .calendar {
+        gap: 5px;
+    }
+
+    .weekdays div, .days div {
+        padding: 8px;
+        font-size: 12px;
+    }
+
+    .events .event h3 {
+        font-size: 16px;
+    }
+
+    .events .event p {
+        font-size: 12px;
+    }
+
+    .events .event button {
+        padding: 6px 12px;
+        font-size: 12px;
+    }
+
+    .modal-content {
+        padding: 15px;
+    }
+}

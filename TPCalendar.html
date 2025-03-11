@@ -1,0 +1,89 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calendar - Telephinus</title>
+    <link rel="stylesheet" href="TPDesign.css">
+</head>
+<body>
+    <div id="calendarPage">
+        <header>
+            <img src="TPLOGO.png" alt="Telephinus Logo" class="logo" id="logo">
+        </header>
+
+        <main>
+            <!-- Month/Year Picker -->
+            <div class="month-year-picker">
+                <select id="monthPicker">
+                    <option value="0">January</option>
+                    <option value="1">February</option>
+                    <option value="2">March</option>
+                    <option value="3">April</option>
+                    <option value="4">May</option>
+                    <option value="5">June</option>
+                    <option value="6">July</option>
+                    <option value="7">August</option>
+                    <option value="8">September</option>
+                    <option value="9">October</option>
+                    <option value="10">November</option>
+                    <option value="11">December</option>
+                </select>
+                <input type="number" id="yearPicker" min="2023" max="2030" value="2025">
+            </div>
+
+            <h1 id="calendarTitle">FEBRUARY 2025</h1>
+            <div class="calendar">
+                <div class="weekdays">
+                    <div>SUN</div>
+                    <div>MON</div>
+                    <div>TUE</div>
+                    <div>WED</div>
+                    <div>THU</div>
+                    <div>FRI</div>
+                    <div>SAT</div>
+                </div>
+                <div class="days" id="calendarDays"></div>
+            </div>
+
+            <div class="events">
+                <div class="event">
+                    <h3>EDSA REVOLUTION</h3>
+                    <p>FEBRUARY 25 2025, TUESDAY</p>
+                    <button class="eventButton" data-event="edsa">Click for more information</button>
+                </div>
+                <div class="event">
+                    <h3>GRADUATION BALL</h3>
+                    <p>FEBRUARY 28 2025, FRIDAY</p>
+                    <button class="eventButton" data-event="graduation">Click for more information</button>
+                </div>
+            </div>
+
+            <!-- Back Button at the Bottom -->
+            <button id="backButton">Back</button>
+        </main>
+
+        <!-- Menu Dropdown -->
+        <div id="menuDropdown" class="dropdown">
+            <ul>
+                <li><a href="TPS.html">Profile</a></li>
+                <li><a href="#">Sudden Announcement</a></li>
+                <li><a href="#">Log Out</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- Modal for Event Details -->
+    <div id="eventModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2 id="modalTitle"></h2>
+            <p id="modalDate"></p>
+            <p id="modalDescription"></p>
+            <p id="modalTime"></p>
+            <p id="modalLocation"></p>
+        </div>
+    </div>
+
+    <script src="TPFunction.js"></script>
+</body>
+</html>

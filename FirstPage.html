@@ -1,0 +1,58 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Telephinus</title>
+    <link rel="stylesheet" href="FPDesign.css">
+</head>
+<body>
+    <!-- Main Interface (Student/Teacher) -->
+    <div id="mainInterface">
+        <header>
+            <img src="TPLOGO.png" alt="Telephinus Logo" class="logo"> <!-- Replace logo.png with your logo file -->
+        </header>
+
+        <main>
+            <div class="button-container">
+                <button id="studentButton">STUDENT</button>
+                <button id="teacherButton">TEACHER/FACULTY</button>
+            </div>
+        </main>
+
+        <footer>
+            <p></p>
+        </footer>
+    </div>
+
+    <!-- Login/Signup Interface (Hidden by Default) -->
+    <div id="loginSignupContainer" style="display: none;">
+        <div id="loginForm">
+            <h2>LOGIN</h2>
+            <input type="email" id="loginEmail" placeholder="EMAIL">
+            <input type="password" id="loginPassword" placeholder="PASSWORD">
+            <button id="loginButton">LOGIN</button>
+            <p>Don't have an account? <a href="#" id="showSignup">Sign up</a></p>
+        </div>
+
+        <div id="signupForm" style="display: none;">
+            <h2>SIGN UP</h2>
+            <div class="form-row">
+                <input type="text" id="firstName" placeholder="FIRST NAME">
+                <input type="text" id="lastName" placeholder="LAST NAME">
+            </div>
+            <div class="form-row">
+                <input type="date" id="birthdate" placeholder="BIRTHDATE">
+                <input type="email" id="signupEmail" placeholder="PCU EMAIL">
+            </div>
+            <div class="form-row">
+                <input type="password" id="signupPassword" placeholder="PASSWORD">
+                <input type="password" id="confirmPassword" placeholder="CONFIRM PASSWORD">
+            </div>
+            <button id="signupButton">SIGN UP</button>
+            <p>Already have an account? <a href="#" id="showLogin">Log in</a></p>
+        </div>
+    </div>
+
+    <script src="FPFunction.js"></script>
+</body>
+</html>
